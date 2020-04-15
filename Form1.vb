@@ -58,7 +58,7 @@
         SPPTetap = GetSPPTetapWith(Jurusan)
         SPPVariable = GetSPPVariableWith(Jenjang)
 
-        totalSPP = HitungBayar(SPPTetap, SPPVariable, Jml_SKS)
+        totalSPP = TotalBayarSPP(SPPTetap, SPPVariable, Jml_SKS)
 
         RTB_OutputMahasiswa.Text = "
 
@@ -76,7 +76,7 @@
         "
     End Sub
 
-    Private Function HitungBayar(SPPTetap As Double, SPPVariabel As Double, SKS As Integer)
+    Private Function TotalBayarSPP(SPPTetap As Double, SPPVariabel As Double, SKS As Integer)
         Dim totalVariable As Double = SPPVariabel * SKS
 
         Return SPPTetap + totalVariable
@@ -179,9 +179,9 @@
         Dim Kelas As String
 
         If RB_Regular.Checked Then
-            Kelas = KELAS_REGULAR
+            Kelas = "Regular"
         ElseIf RB_Internasional.Checked Then
-            Kelas = KELAS_INTERNASIONAL
+            Kelas = "Internasional"
         Else
             Return False
         End If
