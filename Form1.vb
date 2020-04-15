@@ -179,9 +179,9 @@
         Dim Kelas As String
 
         If RB_Regular.Checked Then
-            Kelas = "Regular"
+            Kelas = KELAS_REGULAR
         ElseIf RB_Internasional.Checked Then
-            Kelas = "Internasional"
+            Kelas = KELAS_INTERNASIONAL
         Else
             Return False
         End If
